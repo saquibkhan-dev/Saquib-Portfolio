@@ -62,7 +62,7 @@ export default function Hero() {
             </a>
 
             <a
-              href=https://www.linkedin.com/in/saquib-java"
+              href="https://www.linkedin.com/in/saquib-java"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
