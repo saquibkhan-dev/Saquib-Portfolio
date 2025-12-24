@@ -1,0 +1,8 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import TechTag from "./TechTag";
+export default function ProjectCard({ title, description, image, tech, points, github, }) {
+    return (_jsxs("div", { className: "\r\n    group rounded-3xl overflow-hidden\r\n    glass border\r\n    transition hover:-translate-y-1.5\r\n    flex flex-col\r\n  ", style: {
+            borderColor: "var(--border)",
+            boxShadow: "0 20px 60px rgba(2,6,23,0.14)"
+        }, children: [_jsx("div", { className: "overflow-hidden rounded-t-3xl", children: _jsx("img", { src: image, alt: title, loading: "lazy", className: "\r\n      w-full\r\n      h-[220px] sm:h-[260px] lg:h-auto\r\n      object-cover\r\n      transition-transform duration-500\r\n      group-hover:scale-[1.03]\r\n    " }) }), _jsxs("div", { className: "p-6 sm:p-8", children: [_jsx("h3", { className: "text-2xl font-semibold tracking-tight", children: title }), _jsx("p", { className: "mt-3 max-w-xl text-[var(--text-muted)]", children: description }), _jsx("div", { className: "mt-4 flex flex-wrap gap-2", children: tech.map((t) => (_jsx(TechTag, { label: t }, t))) }), _jsx("ul", { className: "mt-6 space-y-2 text-[var(--text-muted)]", children: points.map((p) => (_jsxs("li", { children: ["\u2022 ", p] }, p))) }), github && (_jsxs("a", { href: github, target: "_blank", className: "\r\n    inline-flex items-center gap-2 mt-10\r\n    text-sm font-semibold\r\n    transition\r\n    group/cta\r\n  ", style: { color: "var(--primary)" }, children: ["View on GitHub", _jsx("span", { className: "\r\n      transition-transform duration-200\r\n      group-hover/cta:translate-x-1\r\n    ", children: "\u2192" })] }))] })] }));
+}
