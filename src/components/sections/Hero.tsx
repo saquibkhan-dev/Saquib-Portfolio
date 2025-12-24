@@ -62,7 +62,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/saquib-khan/"
+              href="https://www.linkedin.com/in/saquib-dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
