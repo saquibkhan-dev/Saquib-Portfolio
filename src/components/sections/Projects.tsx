@@ -1,12 +1,8 @@
 import ProjectCard from "../ui/ProjectCard";
 
-import approvalImg from "../../assets/projects/approval.png";
-import authImg from "../../assets/projects/auth-dashboard.png";
-
 export default function Projects() {
   return (
-    <section className="py-36" id="projects">
-
+    <section id="projects" className="py-32">
       <div className="max-w-2xl">
         <p
           className="text-sm font-semibold tracking-wide"
@@ -15,42 +11,73 @@ export default function Projects() {
           PROJECTS
         </p>
 
-        <h2 className="mt-3 text-4xl font-bold">
+        <h2
+          className="mt-3 text-4xl font-bold"
+          style={{ color: "var(--text-main)" }}
+        >
           Selected work
         </h2>
 
-        <p className="mt-4 text-[var(--text-muted)]">
-          A selection of projects that demonstrate real-world
-          frontend development, system design, and UI polish.
+        <p
+          className="mt-4"
+          style={{ color: "var(--text-muted)" }}
+        >
+          A collection of real-world projects showcasing frontend
+          architecture, UI judgement, and full-stack understanding.
         </p>
       </div>
 
-      <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
-
+      <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
         <ProjectCard
-          title="Approval Workflow System"
-          description="Enterprise-style expense approval system with role-based access and audit logging."
-          image={approvalImg}
-          tech={["React", "Node.js", "Express", "MySQL"]}
+          title="Invoice Chaser"
+          description="A freelance invoice management and reminder system designed to track payments and automate follow-ups."
+          tech={["React", "Supabase", "Stripe", "Tailwind"]}
           points={[
-            "Implemented multi-level approval logic based on request amount",
-            "Built immutable audit logs with CSV export for compliance",
-            "Designed clean React UI without external UI libraries"
+            "Invoice creation and status tracking",
+            "Automated payment reminder workflow",
+            "Client-facing invoice pages",
+            "Clean SaaS-style dashboard UI"
           ]}
-          github="https://github.com/saquibkhan-dev"
+          github="https://github.com/saquibkhan-dev/Invoice-Chaser"
         />
 
         <ProjectCard
-          title="Authentication Dashboard"
-          description="Secure authentication and role-based dashboard with JWT authorization."
-          image={authImg}
-          tech={["React", "Node.js", "JWT", "MySQL"]}
+          title="Full-Stack Job Application Platform"
+          description="An end-to-end job application system with authentication, role-based access, and application workflows."
+          tech={["React", "Node.js", "Express", "MySQL"]}
           points={[
-            "Implemented secure signup and login with encrypted passwords",
-            "Protected routes using token-based authorization",
-            "Built role-aware dashboards with clean state management"
+            "User authentication and authorization",
+            "Job posting and application lifecycle",
+            "Role-based access control",
+            "Full-stack architecture with REST APIs"
           ]}
-          github="https://github.com/saquibkhan-dev"
+          github="https://github.com/saquibkhan-dev/Full-stack-job-application-platform"
+        />
+
+        <ProjectCard
+          title="Business Website"
+          description="A responsive business website focused on layout structure, accessibility, and content clarity."
+          tech={["HTML", "CSS", "JavaScript"]}
+          points={[
+            "Responsive layout using modern CSS",
+            "Semantic HTML structure",
+            "Business-focused content organization",
+            "Performance and accessibility considerations"
+          ]}
+          github="https://github.com/saquibkhan-dev/business-website"
+        />
+
+        <ProjectCard
+          title="Social Media Dashboard"
+          description="A dashboard-style interface for visualizing and managing social media metrics."
+          tech={["React", "JavaScript", "CSS"]}
+          points={[
+            "Dashboard UI patterns",
+            "Component-based architecture",
+            "Scalable layout for analytics",
+            "Focus on clarity and usability"
+          ]}
+          github="https://github.com/saquibkhan-dev/Social-Media-Dashboard"
         />
       </div>
     </section>
