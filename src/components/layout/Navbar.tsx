@@ -3,7 +3,7 @@ import ThemeToggle from "../ui/ThemeToggle";
 export default function Navbar() {
   return (
     <header
-      className="w-full border-b"
+      className="sticky top-0 z-50 w-full border-b"
       style={{
         backgroundColor: "var(--surface)",
         borderColor: "var(--border)"
@@ -24,9 +24,11 @@ export default function Navbar() {
           <a href="#skills" className="hover:underline">
             Skills
           </a>
+
           <a href="#projects" className="hover:underline">
             Work
           </a>
+
           <a href="#contact" className="hover:underline">
             Contact
           </a>

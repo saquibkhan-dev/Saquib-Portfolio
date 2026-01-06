@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import profile from "../../assets/profile.jpg";
 
 export default function Hero() {
   const [show, setShow] = useState(false);
@@ -10,47 +9,44 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
-      {/* LEFT — CONTENT */}
-      <div
-        className="flex items-center px-6 py-16 lg:px-20"
-        style={{ backgroundColor: "var(--surface)" }}
-      >
+    <section
+      className="min-h-screen flex items-center"
+      style={{ backgroundColor: "var(--surface)" }}
+    >
+      <div className="w-full max-w-4xl px-6 lg:px-20">
         <div
           className={`
-            max-w-md
-            ${show ? "animate-[fadeUp_0.8s_ease-out_forwards]" : "opacity-0"}
+            ${show ? "animate-[fadeUp_0.9s_ease-out_forwards]" : "opacity-0"}
           `}
         >
-          {/* NAME */}
-          <h1
-            className="text-4xl font-semibold tracking-tight"
-            style={{ color: "var(--text-main)" }}
-          >
-            Saquib Khan
-          </h1>
-
-          {/* ROLE */}
+          {/* EYEBROW */}
           <p
-            className="mt-1 text-sm"
+            className="text-sm tracking-wide uppercase"
             style={{ color: "var(--text-muted)" }}
           >
             Frontend Developer
           </p>
 
-          {/* DESCRIPTION */}
+          {/* NAME */}
+          <h1
+            className="mt-4 text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight"
+            style={{ color: "var(--text-main)" }}
+          >
+            Saquib Khan
+          </h1>
+
+          {/* STATEMENT */}
           <p
-            className="mt-6 leading-relaxed"
+            className="mt-8 max-w-2xl text-lg leading-relaxed"
             style={{ color: "var(--text-muted)" }}
           >
-            Frontend developer with a strong focus on building clean,
-            scalable web interfaces. Experienced in React, TypeScript,
-            and Tailwind CSS, with hands-on work on dashboards,
-            approval workflows, and authentication systems.
+            I build clean, scalable, and user-focused web interfaces using
+            React, TypeScript, and modern CSS. My work focuses on clarity,
+            performance, and real-world product thinking.
           </p>
 
           {/* LINKS */}
-          <div className="mt-6 flex flex-wrap gap-6 text-sm">
+          <div className="mt-10 flex flex-wrap gap-8 text-sm">
             <a
               href="https://github.com/saquibkhan-dev"
               target="_blank"
@@ -62,7 +58,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/saquib-java"
+              href="https://www.linkedin.com/in/saquib-khan/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
@@ -82,36 +78,12 @@ export default function Hero() {
 
           {/* SCROLL HINT */}
           <div
-            className="mt-12 text-sm"
+            className="mt-24 text-sm"
             style={{ color: "var(--text-muted)" }}
           >
             ↓ Scroll to explore
           </div>
         </div>
-      </div>
-
-      {/* RIGHT — IMAGE */}
-      <div className="relative overflow-hidden h-[50vh] lg:h-auto pointer-events-none">
-        <img
-          src={profile}
-          alt="Saquib Khan"
-          className={`
-            w-full h-full object-cover
-            ${show ? "animate-[slideIn_1.1s_ease-out_forwards]" : "opacity-0"}
-          `}
-          style={{
-            filter: "grayscale(20%) brightness(0.95)"
-          }}
-        />
-
-        {/* THEME-AWARE IMAGE OVERLAY */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, transparent, var(--surface-soft))"
-          }}
-        />
       </div>
     </section>
   );
